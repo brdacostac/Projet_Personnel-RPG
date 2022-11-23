@@ -1,0 +1,38 @@
+﻿<Application x:Class="BruckRPG.App"
+             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:local="clr-namespace:BruckRPG"
+             StartupUri="MainWindow.xaml">
+    <Application.Resources>
+        <ResourceDictionary>
+            <!--Définition de la couleur des boutons du menu-->
+            <RadialGradientBrush x:Key="colorButton">
+                <GradientStop Color="#BCFF91" Offset="0"/>
+                <GradientStop Color="#84CE55" Offset="1.2"/>
+
+            </RadialGradientBrush>
+
+            <!--Définition du style des boutons de menu de gauche-->
+
+            <Style TargetType="Button" x:Key="MenuBouton">
+                <Setter Property="Background" Value="{StaticResource colorButton}"/>
+                <Setter Property="Foreground" Value="#323232"/>
+                <Setter Property="Width" Value="120" />
+            </Style>
+
+            <Style TargetType="TextBlock" x:Key="FontAiryin">
+                <Setter Property="FontFamily" Value="fonts/Airyin.otf #Airyin"/>
+            </Style>
+
+            <!--Définition des styles pour les brdures de la fenêtre de l'application-->
+
+            <ResourceDictionary.MergedDictionaries>
+                <ResourceDictionary Source="pack://application:,,,/MahApps.Metro;component/Styles/Controls.xaml" />
+                <ResourceDictionary Source="pack://application:,,,/MahApps.Metro;component/Styles/Fonts.xaml" />
+                <ResourceDictionary Source="pack://application:,,,/MahApps.Metro;component/Styles/Themes/Dark.Steel.xaml" />
+            </ResourceDictionary.MergedDictionaries>
+
+        </ResourceDictionary>
+
+    </Application.Resources>
+</Application>

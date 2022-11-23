@@ -1,0 +1,50 @@
+﻿<mah:MetroWindow x:Class="BruckRPG.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:mah="clr-namespace:MahApps.Metro.Controls;assembly=MahApps.Metro"
+        ResizeMode="NoResize" 
+        Icon="/img/tokenBruck.png"
+        xmlns:local="clr-namespace:BruckRPG" mc:Ignorable="d"
+        Title="BruckRPG" Height="600" Width="1000"
+        WindowStartupLocation="CenterScreen">
+    <DockPanel>
+
+        <!--Menu de gauche-->
+        <Grid DockPanel.Dock="Left" Width="120">
+            <Grid.RowDefinitions>
+                <RowDefinition />
+                <RowDefinition />
+                <RowDefinition />
+                <RowDefinition />
+                <RowDefinition />
+                <RowDefinition />
+            </Grid.RowDefinitions>
+
+            <Button Content="HOME" FontFamily="/fonts/#Airyin" FontSize="25" Grid.Row="0" Style="{StaticResource MenuBouton}" Click="Button_Click_Acceuil"/>
+
+            <Button Content="DADOS" FontFamily="/fonts/#Airyin" FontSize="25" Grid.Row="1" Style="{StaticResource MenuBouton}" Click="Button_Click_Dados"/>
+
+            <Button Content="3SERATO" FontFamily="/fonts/#Airyin" FontSize="25" Grid.Row="2" Style="{StaticResource MenuBouton}" Click="Button_Click_ThreeSerato"/>
+
+            <Button Content=" " Grid.Row="3" Style="{StaticResource MenuBouton}"/>
+
+            <Button Content=" " Grid.Row="4" Style="{StaticResource MenuBouton}"/>
+
+            <Button Content=" " Grid.Row="6" Style="{StaticResource MenuBouton}"/>
+
+        </Grid>
+
+        <!--Toute le reste de la page-->
+        <ContentControl x:Name="pagePrincipale">
+            <ContentControl.Content>
+
+                <local:UCPagePrincipale/>
+
+            </ContentControl.Content>
+        </ContentControl>
+
+
+    </DockPanel>
+</mah:MetroWindow>
