@@ -39,5 +39,10 @@ namespace BruckRPG
         {
             pagePrincipale.Content = new UCThreeSerato();
         }
+
+        private void Button_Click_Pontos(object sender, RoutedEventArgs e)
+        {
+            pagePrincipale.Content = new UCPontos();
+        }
     }
 }

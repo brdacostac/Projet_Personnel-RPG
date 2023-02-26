@@ -10,7 +10,6 @@
         Title="BruckRPG" Height="600" Width="1000"
         WindowStartupLocation="CenterScreen">
     <DockPanel>
-
         <!--Menu de gauche-->
         <Grid DockPanel.Dock="Left" Width="120">
             <Grid.RowDefinitions>
@@ -28,7 +27,7 @@
 
             <Button Content="3SERATO" FontFamily="/fonts/#Airyin" FontSize="25" Grid.Row="2" Style="{StaticResource MenuBouton}" Click="Button_Click_ThreeSerato"/>
 
-            <Button Content=" " Grid.Row="3" Style="{StaticResource MenuBouton}"/>
+            <Button Content="PONTOS" FontFamily="/fonts/#Airyin" FontSize="25" Grid.Row="3" Style="{StaticResource MenuBouton}" Click="Button_Click_Pontos"/>
 
             <Button Content=" " Grid.Row="4" Style="{StaticResource MenuBouton}"/>
 
@@ -44,7 +43,6 @@
 
             </ContentControl.Content>
         </ContentControl>
-
 
     </DockPanel>
 </mah:MetroWindow>

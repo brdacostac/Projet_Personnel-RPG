@@ -1,0 +1,213 @@
+﻿<UserControl x:Class="BruckRPG.UCPontos"
+             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+             xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+             xmlns:mah="clr-namespace:MahApps.Metro.Controls;assembly=MahApps.Metro"
+             xmlns:local="clr-namespace:BruckRPG"
+             mc:Ignorable="d"
+             d:DesignHeight="450" d:DesignWidth="800">
+    
+    
+
+        <DockPanel>
+            <!--Menu en haut de la page-->
+
+        <Border BorderThickness="0,2,2,2" BorderBrush="Black" DockPanel.Dock="Top">
+            <DockPanel>
+                <DockPanel.Background>
+                    <RadialGradientBrush>
+                        <GradientStop Color="#434343" Offset="0.0"/>
+                        <GradientStop Color="#323232" Offset="1"/>
+                    </RadialGradientBrush>
+                </DockPanel.Background>
+
+                <!--Logo de la boutique-->
+
+                <Image Source="img/tokenJulius.png" Margin="5,5,0,5" Width="100" HorizontalAlignment="Center" DockPanel.Dock="Left"/>
+
+                <!--Texte RPG-->
+
+                <TextBlock Text="RPG BRUCK" Style="{StaticResource FontAiryin }" Margin="-150,0,0,10" VerticalAlignment="Center" HorizontalAlignment="Center" FontSize="35" Foreground="#e5e5e5"/>
+
+            </DockPanel>
+        </Border>
+        <ListBox >
+            <ListBox.ItemsPanel>
+                <ItemsPanelTemplate>
+                    <StackPanel Orientation="Vertical"/>
+                </ItemsPanelTemplate>
+            </ListBox.ItemsPanel>
+
+            <ListBoxItem>
+                <!--Equipe 1-->
+                <Grid>
+                    <Grid.RowDefinitions>
+                        <RowDefinition Height="160"/>
+                        <RowDefinition Height="50"/>
+                    </Grid.RowDefinitions>
+
+                    <Grid.ColumnDefinitions>
+                        <ColumnDefinition/>
+                        <ColumnDefinition Width="100"/>
+                        <ColumnDefinition/>
+                    </Grid.ColumnDefinitions>
+
+                    <TextBlock Text="EQUIPE 1" Style="{StaticResource FontAiryin }" Grid.Row="0" Grid.Column="1" HorizontalAlignment="Center" FontSize="25" Foreground="#e5e5e5"/>
+
+
+                    <TextBlock Text="DEBITO" Foreground="AliceBlue" HorizontalAlignment="Center" FontSize="30" Style="{StaticResource FontAiryin }" Grid.Column="0" Grid.Row="0" ></TextBlock>
+                    <Label x:Name="MinhaLabel1" BorderThickness="1,2" BorderBrush="Red" Background="AliceBlue" Foreground="Black" Width="150" Height="40" Content="0" FontSize="15" FontWeight="Bold" Grid.Column="0" Grid.Row="0" HorizontalAlignment="Center" VerticalAlignment="Center"/>
+
+                    <TextBlock Text="CREDITO" Foreground="AliceBlue" HorizontalAlignment="Center" FontSize="30" Style="{StaticResource FontAiryin }" Grid.Column="2" Grid.Row="0" ></TextBlock>
+                    <Label x:Name="MinhaLabel2" Background="AliceBlue" BorderThickness="1,2" BorderBrush="Green" Foreground="Black" Width="150" Height="40" Content="0" FontSize="15" FontWeight="Bold" Grid.Column="2" Grid.Row="0" HorizontalAlignment="Center" VerticalAlignment="Center"/>
+
+                    <TextBox x:Name="MeuTextBox" Width="200" Grid.Column="0" Grid.Row="1" PreviewTextInput="MeuTextBox_PreviewTextInput" HorizontalAlignment="center" VerticalAlignment="center"/>
+                    <Button Width="100" Grid.Row="1" Grid.Column="1" HorizontalAlignment="Left" Height="50" Content="Enviar" Click="btnEnviar_Click"></Button>
+                </Grid>
+            </ListBoxItem>
+
+            <ListBoxItem>
+                <!--Equipe 2-->
+                <Grid>
+                    <Grid.RowDefinitions>
+                        <RowDefinition Height="160"/>
+                        <RowDefinition Height="50"/>
+                    </Grid.RowDefinitions>
+
+                    <Grid.ColumnDefinitions>
+                        <ColumnDefinition/>
+                        <ColumnDefinition Width="100"/>
+                        <ColumnDefinition/>
+                    </Grid.ColumnDefinitions>
+
+                    <TextBlock Text="EQUIPE 2" Style="{StaticResource FontAiryin }" Grid.Row="0" Grid.Column="1" HorizontalAlignment="Center" FontSize="25" Foreground="#e5e5e5"/>
+
+
+                    <TextBlock Text="DEBITO" Foreground="AliceBlue" HorizontalAlignment="Center" FontSize="30" Style="{StaticResource FontAiryin }" Grid.Column="0" Grid.Row="0" ></TextBlock>
+                    <Label x:Name="MinhaLabel3" BorderThickness="1,2" BorderBrush="Red" Background="AliceBlue" Foreground="Black" Width="150" Height="40" Content="0" FontSize="15" FontWeight="Bold" Grid.Column="0" Grid.Row="0" HorizontalAlignment="Center" VerticalAlignment="Center"/>
+
+                    <TextBlock Text="CREDITO" Foreground="AliceBlue" HorizontalAlignment="Center" FontSize="30" Style="{StaticResource FontAiryin }" Grid.Column="2" Grid.Row="0" ></TextBlock>
+                    <Label x:Name="MinhaLabel4" Background="AliceBlue" BorderThickness="1,2" BorderBrush="Green" Foreground="Black" Width="150" Height="40" Content="0" FontSize="15" FontWeight="Bold" Grid.Column="2" Grid.Row="0" HorizontalAlignment="Center" VerticalAlignment="Center"/>
+
+                    <TextBox x:Name="MeuTextBox1" Width="200" Grid.Column="0" Grid.Row="1" PreviewTextInput="MeuTextBox_PreviewTextInput" HorizontalAlignment="center" VerticalAlignment="center"/>
+                    <Button Width="100" Grid.Row="1" Grid.Column="1" HorizontalAlignment="Left" Height="50" Content="Enviar" Click="btnEnviar_Click1"></Button>
+                </Grid>
+            </ListBoxItem>
+
+            <ListBoxItem>
+                <!--Equipe 3-->
+                <Grid>
+                    <Grid.RowDefinitions>
+                        <RowDefinition Height="160"/>
+                        <RowDefinition Height="50"/>
+                    </Grid.RowDefinitions>
+
+                    <Grid.ColumnDefinitions>
+                        <ColumnDefinition/>
+                        <ColumnDefinition Width="100"/>
+                        <ColumnDefinition/>
+                    </Grid.ColumnDefinitions>
+
+                    <TextBlock Text="EQUIPE 3" Style="{StaticResource FontAiryin }" Grid.Row="0" Grid.Column="1" HorizontalAlignment="Center" FontSize="25" Foreground="#e5e5e5"/>
+
+
+                    <TextBlock Text="DEBITO" Foreground="AliceBlue" HorizontalAlignment="Center" FontSize="30" Style="{StaticResource FontAiryin }" Grid.Column="0" Grid.Row="0" ></TextBlock>
+                    <Label x:Name="MinhaLabel5" BorderThickness="1,2" BorderBrush="Red" Background="AliceBlue" Foreground="Black" Width="150" Height="40" Content="0" FontSize="15" FontWeight="Bold" Grid.Column="0" Grid.Row="0" HorizontalAlignment="Center" VerticalAlignment="Center"/>
+
+                    <TextBlock Text="CREDITO" Foreground="AliceBlue" HorizontalAlignment="Center" FontSize="30" Style="{StaticResource FontAiryin }" Grid.Column="2" Grid.Row="0" ></TextBlock>
+                    <Label x:Name="MinhaLabel6" Background="AliceBlue" BorderThickness="1,2" BorderBrush="Green" Foreground="Black" Width="150" Height="40" Content="0" FontSize="15" FontWeight="Bold" Grid.Column="2" Grid.Row="0" HorizontalAlignment="Center" VerticalAlignment="Center"/>
+
+                    <TextBox x:Name="MeuTextBox3" Width="200" Grid.Column="0" Grid.Row="1" PreviewTextInput="MeuTextBox_PreviewTextInput" HorizontalAlignment="center" VerticalAlignment="center"/>
+                    <Button Width="100" Grid.Row="1" Grid.Column="1" HorizontalAlignment="Left" Height="50" Content="Enviar" Click="btnEnviar_Click3"></Button>
+                </Grid>
+            </ListBoxItem>
+
+            <ListBoxItem>
+                <!--Equipe 4-->
+                <Grid>
+                    <Grid.RowDefinitions>
+                        <RowDefinition Height="160"/>
+                        <RowDefinition Height="50"/>
+                    </Grid.RowDefinitions>
+
+                    <Grid.ColumnDefinitions>
+                        <ColumnDefinition/>
+                        <ColumnDefinition Width="100"/>
+                        <ColumnDefinition/>
+                    </Grid.ColumnDefinitions>
+
+                    <TextBlock Text="EQUIPE 4" Style="{StaticResource FontAiryin }" Grid.Row="0" Grid.Column="1" HorizontalAlignment="Center" FontSize="25" Foreground="#e5e5e5"/>
+
+
+                    <TextBlock Text="DEBITO" Foreground="AliceBlue" HorizontalAlignment="Center" FontSize="30" Style="{StaticResource FontAiryin }" Grid.Column="0" Grid.Row="0" ></TextBlock>
+                    <Label x:Name="MinhaLabel7" BorderThickness="1,2" BorderBrush="Red" Background="AliceBlue" Foreground="Black" Width="150" Height="40" Content="0" FontSize="15" FontWeight="Bold" Grid.Column="0" Grid.Row="0" HorizontalAlignment="Center" VerticalAlignment="Center"/>
+
+                    <TextBlock Text="CREDITO" Foreground="AliceBlue" HorizontalAlignment="Center" FontSize="30" Style="{StaticResource FontAiryin }" Grid.Column="2" Grid.Row="0" ></TextBlock>
+                    <Label x:Name="MinhaLabel8" Background="AliceBlue" BorderThickness="1,2" BorderBrush="Green" Foreground="Black" Width="150" Height="40" Content="0" FontSize="15" FontWeight="Bold" Grid.Column="2" Grid.Row="0" HorizontalAlignment="Center" VerticalAlignment="Center"/>
+
+                    <TextBox x:Name="MeuTextBox4" Width="200" Grid.Column="0" Grid.Row="1" PreviewTextInput="MeuTextBox_PreviewTextInput" HorizontalAlignment="center" VerticalAlignment="center"/>
+                    <Button Width="100" Grid.Row="1" Grid.Column="1" HorizontalAlignment="Left" Height="50" Content="Enviar" Click="btnEnviar_Click4"></Button>
+                </Grid>
+            </ListBoxItem>
+
+            <ListBoxItem>
+                <!--Equipe 5-->
+                <Grid>
+                    <Grid.RowDefinitions>
+                        <RowDefinition Height="160"/>
+                        <RowDefinition Height="50"/>
+                    </Grid.RowDefinitions>
+
+                    <Grid.ColumnDefinitions>
+                        <ColumnDefinition/>
+                        <ColumnDefinition Width="100"/>
+                        <ColumnDefinition/>
+                    </Grid.ColumnDefinitions>
+
+                    <TextBlock Text="EQUIPE 5" Style="{StaticResource FontAiryin }" Grid.Row="0" Grid.Column="1" HorizontalAlignment="Center" FontSize="25" Foreground="#e5e5e5"/>
+
+
+                    <TextBlock Text="DEBITO" Foreground="AliceBlue" HorizontalAlignment="Center" FontSize="30" Style="{StaticResource FontAiryin }" Grid.Column="0" Grid.Row="0" ></TextBlock>
+                    <Label x:Name="MinhaLabel9" BorderThickness="1,2" BorderBrush="Red" Background="AliceBlue" Foreground="Black" Width="150" Height="40" Content="0" FontSize="15" FontWeight="Bold" Grid.Column="0" Grid.Row="0" HorizontalAlignment="Center" VerticalAlignment="Center"/>
+
+                    <TextBlock Text="CREDITO" Foreground="AliceBlue" HorizontalAlignment="Center" FontSize="30" Style="{StaticResource FontAiryin }" Grid.Column="2" Grid.Row="0" ></TextBlock>
+                    <Label x:Name="MinhaLabel10" Background="AliceBlue" BorderThickness="1,2" BorderBrush="Green" Foreground="Black" Width="150" Height="40" Content="0" FontSize="15" FontWeight="Bold" Grid.Column="2" Grid.Row="0" HorizontalAlignment="Center" VerticalAlignment="Center"/>
+
+                    <TextBox x:Name="MeuTextBox5" Width="200" Grid.Column="0" Grid.Row="1" PreviewTextInput="MeuTextBox_PreviewTextInput" HorizontalAlignment="center" VerticalAlignment="center"/>
+                    <Button Width="100" Grid.Row="1" Grid.Column="1" HorizontalAlignment="Left" Height="50" Content="Enviar" Click="btnEnviar_Click5"></Button>
+                </Grid>
+            </ListBoxItem>
+
+            <ListBoxItem>
+                <!--Equipe 6-->
+                <Grid>
+                    <Grid.RowDefinitions>
+                        <RowDefinition Height="160"/>
+                        <RowDefinition Height="50"/>
+                    </Grid.RowDefinitions>
+
+                    <Grid.ColumnDefinitions>
+                        <ColumnDefinition/>
+                        <ColumnDefinition Width="100"/>
+                        <ColumnDefinition/>
+                    </Grid.ColumnDefinitions>
+
+                    <TextBlock Text="EQUIPE 6" Style="{StaticResource FontAiryin }" Grid.Row="0" Grid.Column="1" HorizontalAlignment="Center" FontSize="25" Foreground="#e5e5e5"/>
+
+
+                    <TextBlock Text="DEBITO" Foreground="AliceBlue" HorizontalAlignment="Center" FontSize="30" Style="{StaticResource FontAiryin }" Grid.Column="0" Grid.Row="0" ></TextBlock>
+                    <Label x:Name="MinhaLabel11" BorderThickness="1,2" BorderBrush="Red" Background="AliceBlue" Foreground="Black" Width="150" Height="40" Content="0" FontSize="15" FontWeight="Bold" Grid.Column="0" Grid.Row="0" HorizontalAlignment="Center" VerticalAlignment="Center"/>
+
+                    <TextBlock Text="CREDITO" Foreground="AliceBlue" HorizontalAlignment="Center" FontSize="30" Style="{StaticResource FontAiryin }" Grid.Column="2" Grid.Row="0" ></TextBlock>
+                    <Label x:Name="MinhaLabel12" Background="AliceBlue" BorderThickness="1,2" BorderBrush="Green" Foreground="Black" Width="150" Height="40" Content="0" FontSize="15" FontWeight="Bold" Grid.Column="2" Grid.Row="0" HorizontalAlignment="Center" VerticalAlignment="Center"/>
+
+                    <TextBox x:Name="MeuTextBox6" Width="200" Grid.Column="0" Grid.Row="1" PreviewTextInput="MeuTextBox_PreviewTextInput" HorizontalAlignment="center" VerticalAlignment="center"/>
+                    <Button Width="100" Grid.Row="1" Grid.Column="1" HorizontalAlignment="Left" Height="50" Content="Enviar" Click="btnEnviar_Click6"></Button>
+                </Grid>
+            </ListBoxItem>
+
+        </ListBox>
+    </DockPanel>
+
+</UserControl>
